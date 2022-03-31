@@ -1,0 +1,39 @@
+Module Module1
+    Dim cost As Decimal
+    Dim journey As Integer
+    Dim people As Integer
+    Dim gallons4trip As Decimal
+    Dim mpg As Integer
+    Dim Litres As Decimal
+    Dim total As Decimal
+    Dim splitcost As Decimal
+    Sub Main()
+        'CHANGE DEPENDING ON THE CAR
+        mpg = 48
+        Litres = 20.4069
+        Console.WriteLine("Enter current cost of fuel (£_.__p)")
+        cost = Console.ReadLine
+        Console.WriteLine("Enter Number of Miles in your Journey")
+        journey = Console.ReadLine
+        Console.WriteLine("Enter Number of Total People in the car")
+        people = Console.ReadLine
+
+        Console.WriteLine(cost)
+        Console.WriteLine(journey)
+        Console.WriteLine(people)
+        Console.WriteLine(gallons4trip)
+        Console.WriteLine(Litres)
+
+        Litres = Litres / 4.546
+        'calculation
+        gallons4trip = journey / Litres
+        total = gallons4trip * cost
+        splitcost = total / people
+        Console.WriteLine("The total cost of the journey is " & total)
+        Console.WriteLine("This is " & splitcost & " each")
+
+
+        Console.ReadLine()
+    End Sub
+
+End Module
